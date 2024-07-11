@@ -15,6 +15,7 @@ We need a web application page that given a CUPS search we display both its clie
     3. **Special discount**: 12% discount. Conditions: the addition of the `invoiced_amount` of its neighbors should be more than 100 euros.
 
 ## Notes
+- For the business logic implementation, I assumed that an offer with a better discount will be prioritized over the other ones. For instead, in case a client can get the Basic discount and Special discount offers, only the Special discount is returned since has a better discount (12%) than the Basic one (5%).
 - An API using **Nuxt Server** was created to returns the data from the JSON files.
     - `/api/clients`: Get all the clients.
     - `/api/clients/{cups}`: Get client by CUPS.
@@ -27,7 +28,7 @@ We need a web application page that given a CUPS search we display both its clie
 ## Project structure
 
 - `core/domain`: business logic where we have models (entities), repositories (interfaces) and services with the use cases.
-- `core/infrastructure`: We create the implementations of the repositories (adapters) that allow the application to access external services suche as databases, APIs, etc. In our case, we will consume the API mentioned previously.
+- `core/infrastructure`: We create the implementations of the repositories (adapters) that allow the application to access external services such as databases, APIs, etc. In our case, we will consume the API mentioned previously.
 - `ui`: contains the presentation layer. Technical details:
     - Implemented with Nuxt 3.
     - Using Pinia as state management.
@@ -39,6 +40,11 @@ We need a web application page that given a CUPS search we display both its clie
 ```console
 npm install
 ```
+2. Run tests
+```console
+npm run test
+```
+
 ### Move to the ui folder and run:
 1. Install dependencies
 ```console
