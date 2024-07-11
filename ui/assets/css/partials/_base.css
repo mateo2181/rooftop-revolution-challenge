@@ -1,0 +1,5 @@
+body {
+    min-height: 100vh;
+    @apply text-slate-900;
+    @apply bg-gray-100;
+}
