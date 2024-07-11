@@ -11,9 +11,8 @@ export const supplyPointRepositoryApi = (): ISupplyPointRepository => ({
     },
 
     getSuppyPointByCups: async (cups) => {
-        const res = await axios.get<Array<SupplyPointDTO>>('/api/supply-points');
-        const supplypoints = res.data;
-        const spFound = supplypoints.find((c: SupplyPointDTO) => Number(c.cups) === cups);
-        return spFound ? mapSupplyPointDTOToSupplyPoint(spFound) : undefined;
+        const res = await axios.get<SupplyPointDTO>(`/api/supply-points/${cups}`);
+        const supplypoint = res.data;
+        return supplypoint ? mapSupplyPointDTOToSupplyPoint(supplypoint) : undefined;
     }
 });

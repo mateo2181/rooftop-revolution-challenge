@@ -11,9 +11,8 @@ export const clientRepositoryApi = (): IClientRepository => ({
     },
 
     getClientByCups: async (cups) => {
-        const res = await axios.get<Array<ClientDTO>>('/api/clients');
-        const clients = res.data;
-        const clientFound = clients.find((c: ClientDTO) => Number(c.cups) === cups);
-        return clientFound ? mapClientDTOToClient(clientFound) : undefined;
+        const res = await axios.get<ClientDTO>(`/api/clients/${cups}`);
+        const client = res.data;
+        return client ? mapClientDTOToClient(client) : undefined;
     }
 });

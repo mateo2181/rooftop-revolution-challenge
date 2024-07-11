@@ -7,9 +7,7 @@
         <div v-if="errorFetchingClient">
             {{ errorFetchingClient }}
         </div>
-        <div class="w-full" v-else-if="client">
-            <ClientInformation :client="client" :supplyPoint="supplyPoint" :offer="offer" />
-        </div>
+        <ClientInformation v-else-if="client" class="w-full" :client="client" :supplyPoint="supplyPoint" :offer="offer" />
     </div>
 </template>
 <script setup>

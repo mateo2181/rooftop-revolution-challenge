@@ -44,8 +44,6 @@ import type { SupplyPoint } from '@/core/domain/models/SupplyPoint';
 import type { Client } from '@/core/domain/models/Client';
 import type { Offer } from '@/core/domain/models/Offer';
 import type { PropType } from 'vue';
-import { defineProps } from 'vue';
-// const {client} = defineProps<{client: Client}>();
 
 const props = defineProps({
     client: Object as PropType<Client>,
