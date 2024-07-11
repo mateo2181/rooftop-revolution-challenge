@@ -1,5 +1,5 @@
 import supplyPoints from '../supply-points.json';
 
-export default defineEventHandler((event) => {
+export default defineEventHandler((_) => {
     return supplyPoints;
 })

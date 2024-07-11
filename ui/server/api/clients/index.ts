@@ -1,5 +1,5 @@
 import clients from '../clients.json';
 
-export default defineEventHandler((event) => {
+export default defineEventHandler((_) => {
     return clients;
 })
