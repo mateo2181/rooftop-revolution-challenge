@@ -33,7 +33,7 @@
             <div v-if="offer">
                 <p>{{ $t('offerFound', { name: offer.name, discount: offer.discount }) }}</p>
             </div>
-            <div v-else>
+            <div test-id="no-offer-found" v-else>
                 {{ $t('offerNotFound') }}
             </div>
         </div>

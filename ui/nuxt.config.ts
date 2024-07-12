@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     "@nuxtjs/i18n",
     "@nuxt/icon",
-    "@nuxt/eslint"
+    "@nuxt/eslint",
+    "@nuxt/test-utils/module"
   ],
   pinia: {
     storesDirs: ['./stores/**'],

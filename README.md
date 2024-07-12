@@ -29,11 +29,14 @@ We need a web application page that given a CUPS search we display both its clie
 
 - `core/domain`: business logic where we have models (entities), repositories (interfaces) and services with the use cases.
 - `core/infrastructure`: We create the implementations of the repositories (adapters) that allow the application to access external services such as databases, APIs, etc. In our case, we will consume the API mentioned previously.
+- `tests`: repository mocks and testing of the client service using Jest. 
 - `ui`: contains the presentation layer. Technical details:
     - Implemented with Nuxt 3.
     - Using Pinia as state management.
     - TailwindCSS and custom components for styling.
     - Translations with i18n.
+    - Unit tests with Vitest.
+
 
 ## How to run the App
 1. Install dependecies on the root level
@@ -53,6 +56,10 @@ npm install
 2. Start the development server on `http://localhost:3000`
 ```console
 npm run dev
+```
+3. Run tests
+```console
+npm run test
 ```
 
 ## Author
