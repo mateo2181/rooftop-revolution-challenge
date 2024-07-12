@@ -72,6 +72,13 @@ npm run test
 npm run cy:run
 ```
 
+## 💪 Possible improvements
+
+- Improve errors handling and ui validations.
+- Add more tests.
+- Move the server out of Nuxt in case we want to clean the ui project and use a different API. For instead, create an API with Node and connect it to Postgres where we have the data about clients and supply points.
+***
+
 
 ## Author
 Mateo Merlo
