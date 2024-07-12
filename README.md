@@ -36,16 +36,13 @@ We need a web application page that given a CUPS search we display both its clie
     - TailwindCSS and custom components for styling.
     - Translations with i18n.
     - Unit tests with Vitest.
+    - E2E tests with Cypress.
 
 
-## How to run the App
+## 🚀 How to run the App
 1. Install dependecies on the root level
 ```console
 npm install
-```
-2. Run tests
-```console
-npm run test
 ```
 
 ### Move to the ui folder and run:
@@ -57,10 +54,24 @@ npm install
 ```console
 npm run dev
 ```
-3. Run tests
+
+
+
+## 🧪 How to run the Tests
+- Run tests  
 ```console
 npm run test
 ```
+### Nuxt project
+- Run unit tests  
+```console
+npm run test
+```
+- Run e2e tests (You should have running the dev server before to run cypress. Use `npm run dev` )  
+```console
+npm run cy:run
+```
+
 
 ## Author
 Mateo Merlo

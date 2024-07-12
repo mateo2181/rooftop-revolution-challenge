@@ -1,3 +1,4 @@
+// @vitest-environment nuxt
 import { describe, expect, vi, test } from "vitest";
 import { createTestingPinia } from '@pinia/testing'
 import { createI18n } from 'vue-i18n';
@@ -14,7 +15,7 @@ const i18n = createI18n({
     missing: (_, key) => key,
 });
 
-const mountComponent = async (initialStatePinia: any) => {
+const mountComponent = async (initialStatePinia: unknown) => {
     const wrapper = await mountSuspended(ClientSearch, {
         global: {
             plugins: [

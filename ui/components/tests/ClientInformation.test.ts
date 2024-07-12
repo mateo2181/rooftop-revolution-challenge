@@ -1,3 +1,4 @@
+// @vitest-environment nuxt
 import { describe, test, expect } from "vitest";
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import ClientInformation from "../ClientInformation.vue";

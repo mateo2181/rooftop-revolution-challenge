@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col gap-6">
-        <div v-if="client" class="flex flex-col gap-4">
+        <section v-if="client" class="flex flex-col gap-4" title="Client Information">
             <h2 class="text-slate-800 text-lg uppercase">{{ $t('clientInformation') }}</h2>
             <div>
                 <p> <strong>{{ $t('clientName') }}</strong> </p>
@@ -14,9 +14,9 @@
                 <p> <strong>{{ $t('clientBuildingType') }}</strong> </p>
                 <p>{{ client.building_type }}</p>
             </div>
-        </div>
+        </section>
         <hr class="border-gray-300">
-        <div v-if="supplyPoint" class="flex flex-col gap-4">
+        <section v-if="supplyPoint" class="flex flex-col gap-4" title="Supply Point Information">
             <h2 class="text-slate-800 text-lg uppercase">{{ $t('supplyPoint') }}</h2>
             <div>
                 <p> <strong>{{ $t('supplyPointProduct') }}</strong> </p>
@@ -26,9 +26,9 @@
                 <p> <strong>{{ $t('supplyPointMonthlyIncome') }}</strong> </p>
                 <p>{{ supplyPoint.invoiced_amount }} &#8364; </p>
             </div>
-        </div>
+        </section>
         <hr class="border-gray-300">
-        <div class="flex flex-col gap-4">
+        <section class="flex flex-col gap-4" title="Offer Information">
             <h2 class="text-slate-800 text-lg uppercase font-semibold">{{ $t('offer') }}</h2>
             <div v-if="offer">
                 <p>{{ $t('offerFound', { name: offer.name, discount: offer.discount }) }}</p>
@@ -36,7 +36,7 @@
             <div test-id="no-offer-found" v-else>
                 {{ $t('offerNotFound') }}
             </div>
-        </div>
+        </section>
     </div>
 </template>
 <script setup lang="ts">

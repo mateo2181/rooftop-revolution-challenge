@@ -1,0 +1,13 @@
+{
+  "cups": "878787",
+  "tariff": "One price",
+  "invoiced_amount": "50.00",
+  "power": {
+    "p1": "4500",
+    "p2": "4200"
+  },
+  "neighbors": [
+    "234567",
+    "345678"
+  ]
+}

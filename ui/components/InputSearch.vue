@@ -23,7 +23,9 @@ const emit = defineEmits(["search"]);
 const cups = ref("");
 
 function handleSearch() {
-    emit("search", cups.value);
+    if (cups.value) {
+        emit("search", cups.value);
+    }
 }
 
 </script>
